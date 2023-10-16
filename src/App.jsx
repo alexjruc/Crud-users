@@ -12,7 +12,9 @@ function App() {
     const [users, setUsers] = useState([]);
     const [idUserUpdate, setIdUserUpdate] = useState(null);
 
-    const { handleSubmit, register, reset } = useForm();
+    const { handleSubmit, register, reset ,formState } = useForm();
+    const {errors} = formState
+    console.log(errors);
 
     const submit = (usersData) => {
         if(idUserUpdate) {
@@ -101,6 +103,7 @@ function App() {
                 register={register}
                 submit={submit}
                 idUserUpdate={idUserUpdate}
+                errors={errors}
             />
         </main>
     );

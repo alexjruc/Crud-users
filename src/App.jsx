@@ -44,12 +44,17 @@ function App() {
     };
     
     const deleteUser = (id) => {
-        axios
-        .delete(BASE_URL + `/users/${id}/`)
-        .then(() => {
-            getAllUsers();
-        })
-        .catch((err) => console.log(err));
+        let res = confirm("seguro quieres eliminar?")
+        if(!res) return;
+        else {
+
+            axios
+            .delete(BASE_URL + `/users/${id}/`)
+            .then(() => {
+                getAllUsers();
+            })
+            .catch((err) => console.log(err));
+        }
     };
     
     const handleClickUpdateUser = (userToUpdate) => {
@@ -80,7 +85,9 @@ function App() {
     }, []);
 
     return (
-        <main className="bg-black w-full min-h-screen text-white p-2">
+        <main className="bg-black w-full min-h-screen text-white font-body">
+            <img className="fixed right-0 bottom-0 w-[450px]" src="/green.png" alt="green elipse" />
+            <img className="fixed left-0 bottom-0 w-[400px] h-[400px]" src="/violet.png" alt="violet elipse" />
             <Header handleOpenModal={handleOpenModal} />
             <UserList
                 users={users}

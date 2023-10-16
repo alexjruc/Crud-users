@@ -1,4 +1,4 @@
-const DeleteModal = ({ isDeleteModal, handleCloseDeleteModal, deleteUser }) => {
+const ModalForDelete = ({ isDeleteModal, handleCloseDeleteModal, deleteUser }) => {
     return (
         <section
             className={`bg-white/70 fixed left-0 top-0 w-full min-h-screen grid justify-center items-center z-20 ${
@@ -20,6 +20,6 @@ const DeleteModal = ({ isDeleteModal, handleCloseDeleteModal, deleteUser }) => {
                 </div>
             </div>
         </section>
-    );
-};
-export default DeleteModal;
+    )
+}
+export default ModalForDelete

@@ -6,7 +6,7 @@ import Modal from "./components/Modal";
 import Header from "./components/Header";
 import { useForm } from "react-hook-form";
 import UserList from "./components/UserList";
-import DeleteModal from "./components/deleteModal";
+import ModalForDelete from "./components/ModalForDelete";
 
 function App() {
     const [isShowModal, setIsShowModal] = useState(false);
@@ -124,7 +124,7 @@ function App() {
                 idUserUpdate={idUserUpdate}
                 errors={errors}
             />
-            <DeleteModal
+            <ModalForDelete
                 deleteUser={deleteUser}
                 isDeleteModal={isDeleteModal}
                 handleCloseDeleteModal={handleCloseDeleteModal}

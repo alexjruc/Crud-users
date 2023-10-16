@@ -11,9 +11,9 @@ const Modal = ({
 }) => {
     return (
         <section
-            className={`bg-white/70 fixed top-0 w-full min-h-screen grid justify-center items-center ${
+            className={`bg-white/80 fixed top-0 w-full min-h-screen grid justify-center items-center ${
                 isShowModal ? "visible opacity-100" : "invisible opacity-0"
-            }} z-[100]`}
+            }} z-[20]`}
         >
             <form
                 onSubmit={handleSubmit(submit)}

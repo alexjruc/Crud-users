@@ -1,4 +1,4 @@
-import { EMAIL_VALIDATIONS, LAST_NAME_VALIDATIONS, NAME_VALIDATIONS, PASSWORD_VALIDATIONS } from "../constants/formValidations";
+import { BITHDAY_VALIDATIONS, EMAIL_VALIDATIONS, LAST_NAME_VALIDATIONS, NAME_VALIDATIONS, PASSWORD_VALIDATIONS } from "../constants/formValidations";
 
 const Modal = ({
     isShowModal,
@@ -118,8 +118,13 @@ const Modal = ({
                         type="date"
                         name=""
                         id="birthday"
-                        {...register("birthday")}
+                        {...register("birthday", BITHDAY_VALIDATIONS)}
                     />
+                    {errors.birthday && (
+                        <span className="text-xs text-red-500">
+                            {errors.birthday.message}
+                        </span>
+                    )}
                 </div>
                 <div className="grid pt-4">
                     <button

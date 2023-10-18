@@ -6,7 +6,7 @@ const Header = ({ handleOpenModal }) => {
             </h1>
             <button
                 onClick={handleOpenModal}
-                className="bg-[#CBFFDA] w-2/3 text-[#302F2F] p-1.5 rounded hover:bg-green-300 transition-colors sm:w-[400px]"
+                className="bg-[#CBFFDA] w-2/3 text-[#302F2F] p-1.5 rounded hover:bg-green-300 transition-colors sm:w-[300px]"
             >
                 Create new user
             </button>

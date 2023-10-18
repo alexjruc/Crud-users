@@ -49,10 +49,17 @@ const PASSWORD_VALIDATIONS = {
         message: "Este campo acepta 25 caracteres como máximo",
     },
 };
+const BITHDAY_VALIDATIONS = {
+    required: {
+        value: true,
+        message: "Este campo es requerido",
+    },
+};
 
 export {
     NAME_VALIDATIONS,
     LAST_NAME_VALIDATIONS,
     EMAIL_VALIDATIONS,
     PASSWORD_VALIDATIONS,
+    BITHDAY_VALIDATIONS,
 };

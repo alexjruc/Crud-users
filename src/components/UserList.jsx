@@ -4,7 +4,7 @@ import CardUser from "./CardUser";
 const UserList = ({ users, handleClickUpdateUser, handleOpenDeleteModal }) => {
     console.log(users);
     return (
-        <section className="max-w-3xl grid grid-cols-[repeat(auto-fit,_280px)] justify-center gap-4 p-2 mx-auto ">
+        <section className="max-w-3xl grid justify-center gap-12 p-2 mx-auto ">
             {users.length === 0 ? (
                 <h3 className="h-[300px] text-center flex flex-col justify-center items-center">
                     <IconUsersGroup size={80} />
